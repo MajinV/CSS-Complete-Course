@@ -1,0 +1,124 @@
+main {
+  padding-top: 2rem;
+}
+
+.packages-background {
+  background: url("../images/plans-background.jpg") center/cover;
+  filter: grayscale(40%);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.plan {
+  width: 80%;
+  border: 4px solid #0e4f1f;
+  padding: 1.6rem;
+  margin: 1.8rem 0;
+  border-left: none;
+  position: relative;
+  z-index: 0;
+}
+
+.plan__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.3rem;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #ff5454;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.plan:hover,
+.plan:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-color: #ff5454;
+}
+
+.plan > .plan__link {
+  text-decoration: none;
+  display: block;
+}
+
+.plan__title {
+  color: black;
+}
+
+.plan__subtitle {
+  color: #979797;
+}
+
+.plan__description {
+  background-color: white;
+  padding: 1rem;
+  font-size:  1.2rem;
+  border: 1px solid #0e4f1f;
+  color: #0e4f1f;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#plus {
+  background-color: #d5ffdc;
+}
+
+#free {
+  background-color: #f0fdf2;
+  float: right;
+  border-right: none;
+  border-left: 5px solid #0e4f1f;
+}
+
+#free:hover,
+#free:active {
+  border-left-color: #ff5454;
+}
+
+#premium {
+  background-color: #1d7a34;
+}
+
+#premium .plan__title {
+  color: white;
+}
+
+#premium .plan__subtitle {
+  color: #bbb;
+}
+
+@media (min-width: 40rem) {
+  main {
+    margin: 3rem auto;
+    max-width:1500px;
+  }
+
+}
+
+@media (min-width: 1500px) {
+  main {
+    max-width:1500px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .plan {
+    border-left: 4px solid #0e4f1f;
+  }
+
+  #free {
+    border-right: 5px solid #0e4f1f;
+  }
+
+  #free:hover,
+  #free:active {
+    border-right-color: #ff5454;
+  }
+
+  
+}
