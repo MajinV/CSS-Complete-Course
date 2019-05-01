@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Montserrat,400|700');
 
+:root {
+  --dark-green: #0e4f1f;
+  --highlight-color: #ff1b68;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -76,7 +81,7 @@ body::-webkit-scrollbar {
 }
 
 .main-header__brand {
-  color: #0e4f1f;
+  color: var(--dark-green);
   text-decoration: none;
   font-weight: bold;
  
@@ -113,7 +118,7 @@ body::-webkit-scrollbar {
 
 .main-nav__item a,
 .mobile-nav__items a {
-  color: #0e4f1f;
+  color: var(--dark-green,#0e4f1f);
   text-decoration: none;
   font-weight: bold;
   padding: 3px 0;
@@ -132,7 +137,7 @@ body::-webkit-scrollbar {
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
-  background: #ff1b68;
+  background: var(--highlight-color,#ff1b68);
   padding: 1rem 2rem;
   border-radius: 8px;
 
@@ -142,7 +147,7 @@ body::-webkit-scrollbar {
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
-  color: #ff1b68;
+  color: var(--highlight-color);
   background: white;
   border: none;
 }
@@ -180,12 +185,12 @@ body::-webkit-scrollbar {
 }
 
 .button {
-  background-color: #0e4f1f;
+  background-color:var(--dark-green);
   color: white;
   font: inherit;
   font-weight: bold;
   padding: 1rem;
-  border: 1.5px solid #0e4f1f;
+  border: 1.5px solid var(--dark-green);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -193,7 +198,7 @@ body::-webkit-scrollbar {
 .button:hover,
 .button:active {
   background-color: white;
-  color: #0e4f1f;
+  color: var(--dark-green);
 }
 
 .button:focus {
@@ -225,7 +230,6 @@ body::-webkit-scrollbar {
 }
 
 .main-footer__link {
-  /* display: inline-block; */
   margin: 0.5rem 0rem;
 }
 
@@ -252,9 +256,6 @@ body::-webkit-scrollbar {
     
     .main-nav {
         display: flex;
-        /* text-align: right;
-        vertical-align: middle;
-        width: calc(100% - 122px); */
     }
 
     .main-footer__links {
