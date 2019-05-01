@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat,400|700');
+
 * {
   box-sizing: border-box;
 }
@@ -39,6 +41,7 @@ body::-webkit-scrollbar {
 }
 
 .main-header {
+  display:flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,6 +49,8 @@ body::-webkit-scrollbar {
   padding: 1rem 2rem;
   width: 100%;
   z-index: 1;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .toggle-button {
@@ -74,34 +79,35 @@ body::-webkit-scrollbar {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  height: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
+ 
+  /* display: inline-block;
+  vertical-align: middle; */
 }
 
 .main-header__brand img {
-  height: 100%;
+  height: 2.5rem;
+  vertical-align: middle;
 }
 
 /* select the first child div element (and subsequent child div elements of that div) */
-.main-header > div {
+/* .main-header > div {
   display: inline-block;
   vertical-align: middle;
-}
+} */
 
 .main-nav {
   display: none;
 }
 
 .main-nav__items {
-  display: inline-block;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .main-nav__item {
-  display: inline-block;
+
   margin: 0 1rem;
 }
 
@@ -154,12 +160,15 @@ body::-webkit-scrollbar {
 }
 
 .mobile-nav__items {
-  width: 90%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 0;
-  text-align: center;
+
 }
 
 .mobile-nav__item {
@@ -210,12 +219,14 @@ body::-webkit-scrollbar {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-footer__link {
   /* display: inline-block; */
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
 .main-footer__link > a {
@@ -240,14 +251,21 @@ body::-webkit-scrollbar {
     }
     
     .main-nav {
-        display: inline-block;
-        text-align: right;
+        display: flex;
+        /* text-align: right;
         vertical-align: middle;
-        width: calc(100% - 122px);
+        width: calc(100% - 122px); */
     }
+
+    .main-footer__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    
   
     .main-footer__link {
-      display: inline-block;
       margin: 0 1rem;
     }
   }
