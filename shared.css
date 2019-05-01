@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat,400|700');
+@import url("https://fonts.googleapis.com/css?family=Anton|Montserrat,400|700");
 
 :root {
   --dark-green: #0e4f1f;
@@ -16,12 +16,20 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  display:grid;
-  height: 100%;
-  grid-template-rows: 3.5rem auto fit-content(8rem);
-  grid-template-areas: "header"
-                       "main"
-                       "footer";
+  padding-top: 3.5rem;
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    height: 100%;
+    padding-top: 0;
+  }
 }
 
 main {
@@ -46,7 +54,7 @@ body::-webkit-scrollbar {
 }
 
 .main-header {
-  display:flex;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -84,7 +92,7 @@ body::-webkit-scrollbar {
   color: var(--dark-green);
   text-decoration: none;
   font-weight: bold;
- 
+
   /* display: inline-block;
   vertical-align: middle; */
 }
@@ -112,13 +120,12 @@ body::-webkit-scrollbar {
 }
 
 .main-nav__item {
-
   margin: 0 1rem;
 }
 
 .main-nav__item a,
 .mobile-nav__items a {
-  color: var(--dark-green,#0e4f1f);
+  color: var(--dark-green, #0e4f1f);
   text-decoration: none;
   font-weight: bold;
   padding: 3px 0;
@@ -137,10 +144,9 @@ body::-webkit-scrollbar {
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
-  background: var(--highlight-color,#ff1b68);
+  background: var(--highlight-color, #ff1b68);
   padding: 1rem 2rem;
   border-radius: 8px;
-
 }
 
 .main-nav__item--cta a:hover,
@@ -165,7 +171,7 @@ body::-webkit-scrollbar {
 }
 
 .mobile-nav__items {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -173,7 +179,6 @@ body::-webkit-scrollbar {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-
 }
 
 .mobile-nav__item {
@@ -185,7 +190,7 @@ body::-webkit-scrollbar {
 }
 
 .button {
-  background-color:var(--dark-green);
+  background-color: var(--dark-green);
   color: white;
   font: inherit;
   font-weight: bold;
@@ -217,7 +222,7 @@ body::-webkit-scrollbar {
   background-color: black;
   padding: 2rem;
   margin-top: 3rem;
-  grid-area:footer;
+  grid-area: footer;
 }
 
 .main-footer__links {
@@ -246,40 +251,42 @@ body::-webkit-scrollbar {
 .open {
   display: block !important;
   opacity: 1 !important;
-  transform: translateY(0)!important;
+  transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
-    .toggle-button {
-      display: none;
-    }
-    
-    .main-nav {
-        display: flex;
-    }
-
-    .main-footer__links {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    
-  
-    .main-footer__link {
-      margin: 0 1rem;
-    }
+  .toggle-button {
+    display: none;
   }
 
-  @keyframes wiggle {
-    0% {
-      transform: rotateZ(0);
-    }
-    50% {
-      transform: rotateZ(-10deg);
-    }
-
-    100% {
-      transform: rotateZ(10deg);
-    }
+  .main-nav {
+    display: flex;
   }
+
+  .main-footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-footer__link {
+    margin: 0 1rem;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
